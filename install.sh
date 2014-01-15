@@ -1,5 +1,5 @@
 # Install xenstore
-apt-get install -y xenstore-utils
+#apt-get install -y xenstore-utils
 
 # Copy scripts
 cp usr/sbin/xe-set-hostname /usr/sbin/xe-set-hostname
