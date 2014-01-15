@@ -18,6 +18,6 @@ Use this commands to install xenserver-automater to your vm template
 ```sh
 wget https://github.com/ablecoder/xenserver-automater/tarball/master -O xenserver-automater.tar.gz
 tar -xvf xenserver-automater.tar.gz
-cd 
+cd AbleCoder-xenserver-automater-*
 bash install.sh
 ```
