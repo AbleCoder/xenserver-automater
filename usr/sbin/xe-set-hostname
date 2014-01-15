@@ -1,11 +1,11 @@
 #!/bin/bash
 XENSTOREREAD=`which xenstore-read`
 if [ -e $XENSTOREREAD ]; then
-  NAME=`$XENSTOREREAD name`
+  HOSTNAME=`$XENSTOREREAD vm-data/hn`
   DOMAIN=`$XENSTOREREAD vm-data/dm`
 
-  [ "$NAME" = "" ] && exit 0
-  echo "$NAME" > /etc/hostname
+  [ "$HOSTNAME" = "" ] && exit 0
+  echo "$HOSTNAME" > /etc/hostname
   /bin/hostname -F /etc/hostname
 
   #if domain info wasn't passed in then dont alter the hosts file
@@ -19,7 +19,7 @@ if [ -e $XENSTOREREAD ]; then
 
 cat << EOF > /etc/hosts
 127.0.0.1	localhost
-$IP	$NAME.$DOMAIN	$NAME	
+$IP	$NAME.$DOMAIN	$HOSTNAME	
 EOF
 	
 fi
