@@ -7,12 +7,13 @@
     xe vm-param-set uuid=$UUID xenstore-data:vm-data/dm=mydomain.com
     xe vm-start uuid=$UUID
 
-## Install scripts on guest VM:
+## Install
 
-Copy usr/sbin/xe-set-* into /usr/sbin/ and chmod +x
+Use this commands to install xenserver-automater to your vm template
 
-## Install Upstart script on guest VM:
-
-Copy etc/init/xe-automate.conf into /etc/init/
-
-## Reboot
+```sh
+wget https://github.com/ablecoder/xenserver-automater/tarball/master -O xenserver-automater.tar.gz
+tar -xvf xenserver-automater.tar.gz
+cd 
+bash install.sh
+```
