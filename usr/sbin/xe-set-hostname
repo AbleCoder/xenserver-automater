@@ -19,7 +19,7 @@ if [ -e $XENSTOREREAD ]; then
 
 cat << EOF > /etc/hosts
 127.0.0.1	localhost
-$IP	$NAME.$DOMAIN	$HOSTNAME	
+$IP	$HOSTNAME.$DOMAIN	$HOSTNAME	
 EOF
 	
 fi
