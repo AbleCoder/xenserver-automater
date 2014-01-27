@@ -8,6 +8,7 @@ xe vm-param-set uuid=$UUID xenstore-data:vm-data/nm=255.255.255.0
 xe vm-param-set uuid=$UUID xenstore-data:vm-data/ns=10.0.0.50
 xe vm-param-set uuid=$UUID xenstore-data:vm-data/hn=new01
 xe vm-param-set uuid=$UUID xenstore-data:vm-data/dm=domain.name
+xe vm-param-set uuid=$UUID other-config:auto_poweron=true
 xe vm-start uuid=$UUID
 ```
 
